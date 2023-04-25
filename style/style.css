@@ -1,0 +1,452 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+/* stylelint-disable declaration-colon-newline-after */
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable import-notation */
+/* stylelint-disable number-max-precision */
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;800&family=Caudex:wght@700&family=Inter:wght@400;500;600&family=Orbitron:wght@700&display=swap");
+
+body {
+  font-family: "Catamaran", sans-serif;
+  background: linear-gradient(108.76deg, #343131 -1.39%, #1d1919 102.08%);
+}
+
+body,
+html {
+  height: 100vh;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  grid-template-rows: 98px 1fr;
+  height: 100%;
+}
+
+.content-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  border-right: 0.945833px solid #505050;
+}
+
+.content-sidebar__button {
+  position: relative;
+  display: block;
+  border: none;
+  width: 100%;
+  height: 98px;
+  background: linear-gradient(127.44deg, #505050 0%, #383838 100%);
+  cursor: pointer;
+}
+
+.content-sidebar__button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/burger.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+}
+
+.content-sidebar__list {
+  list-style: none;
+  margin-bottom: 60px;
+  padding: 0;
+}
+
+.content-sidebar__item:not(:last-child) {
+  margin-bottom: 63px;
+}
+
+.content-sidebar__link {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content-sidebar__fb {
+  background-image: url("../images/fb.svg");
+}
+
+.content-sidebar__inst {
+  background-image: url("../images/inst.svg");
+}
+
+.content-sidebar__twitter {
+  background-image: url("../images/twitter.svg");
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  padding-left: 60px;
+}
+
+.header__wrapper {
+  z-index: -1;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.header__item {
+  position: relative;
+}
+
+.header__item:not(:last-child) {
+  margin-right: 67px;
+}
+
+.header__item:last-child {
+  margin-right: 74px;
+}
+
+.header__link {
+  font-size: 17px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__link::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.header__link.active {
+  font-weight: 800;
+}
+
+.header__link.active::after,
+.header__link:hover::after {
+  opacity: 1;
+}
+
+.header__link.wallet {
+  display: block;
+  border-style: cover;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/wallet.svg");
+  background-repeat: no-repeat;
+}
+
+.header__logo {
+  display: block;
+  width: 103px;
+  height: 31px;
+  background-image: url("../images/logo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  color: #fff;
+}
+
+.swiper {
+  position: relative;
+  display: flex;
+  height: calc(100vh - 98px);
+}
+
+.swiper-wrapper {
+  position: static;
+}
+
+.swiper-slide__image {
+  position: absolute;
+  left: 15%;
+  bottom: 0;
+  width: 46%;
+}
+
+.swiper-body {
+  margin-top: 69px;
+  margin-left: 64%;
+}
+
+.swiper-body__title {
+  margin: 0;
+  margin-bottom: 30px;
+  max-width: 385px;
+  font-family: "Caudex";
+  font-weight: 700;
+  font-size: 45.4px;
+  line-height: 118%;
+}
+
+.swiper-body__title span {
+  position: relative;
+}
+
+.swiper-body__title span::before,
+.swiper-body__title span::after {
+  content: "3D printed";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.swiper-body__title span::before {
+  left: -4px;
+  top: 0;
+  color: #fb258b;
+}
+
+.swiper-body__title span::after {
+  left: 2px;
+  bottom: -2px;
+  color: #5025fb;
+}
+
+.swiper-body__desc {
+  margin-bottom: 47px;
+  max-width: 385px;
+  font-family: "Catamaran";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 139.5%;
+}
+
+.swiper-body__btn {
+  font-family: "Orbitron";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 139.5%;
+  text-decoration: none;
+}
+
+.swiper-body__buy {
+  position: relative;
+  margin-right: 32px;
+  padding: 11px 24px;
+  box-shadow: 0 0 0 0 #fff;
+  font-weight: 700;
+  font-size: 18px;
+  color: #252525;
+  background-color: #ffff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.swiper-body__buy:hover {
+  box-shadow: 0 0 0 6px #fff;
+}
+
+.swiper-body__buy::before,
+.swiper-body__buy::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-body__buy::before {
+  left: -6px;
+  top: -6px;
+  background-color: #fb258b;
+}
+
+.swiper-body__buy::after {
+  right: -6px;
+  bottom: -6px;
+  background-color: #5025fb;
+}
+
+.swiper-body__view {
+  position: relative;
+  border: 1px solid #fff;
+  padding: 16px 21px 16px 45px;
+  width: 166px;
+  font-family: "Orbitron";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 139.5%;
+  color: #fff;
+}
+
+.swiper-body__view:hover {
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.swiper-body__view::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/watch.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-40%);
+}
+
+.swiper-slide {
+  position: inherit;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical > .swiper-pagination-bullets {
+  position: absolute;
+  left: 60px;
+  right: inherit;
+  top: 313px;
+  flex-basis: 203px;
+  width: 203px;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.swiper-pagination-bullet-active {
+  background: transparent;
+}
+
+.swiper-pagination-bullet {
+  width: inherit;
+  height: inherit;
+  font-family: "Catamaran";
+  font-weight: 800;
+  font-style: normal;
+  font-size: 34.05px;
+  line-height: 139.5%;
+  text-align: left;
+  background: transparent;
+}
+
+.pagintation-art {
+  position: relative;
+  display: block;
+  font-family: "Catamaran";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 22.7px;
+  line-height: 139.5%;
+}
+
+.pagintation-art::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 1px;
+  background-image: url("../images/line-bullet.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pagintation-price {
+  display: block;
+  font-weight: 600;
+  font-size: 17.025px;
+  line-height: 139.5%;
+  color: #bcbcbc;
+}
+
+.pagintation-price span {
+  font-size: 23px;
+}
+
+.swiper-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: linear-gradient(
+    270deg,
+    rgba(66, 66, 66, 0.49) 0%,
+    rgba(66, 66, 66, 0.4753) 76.04%,
+    rgba(66, 66, 66, 0) 100%
+  );
+  backdrop-filter: blur(23.6458px);
+}
+
+.swiper-info {
+  display: grid;
+  flex-basis: calc(100% - 360px);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto 1fr;
+  padding-left: 60px;
+  gap: 5%;
+}
+
+.swiper-info__author {
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+  font-family: "Caudex";
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 29px;
+}
+
+.swiper-info__item {
+  font-family: "Orbitron";
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+}
+
+.swiper-info__item span {
+  display: block;
+  margin-top: 11px;
+  font-family: "Catamaran";
+  font-weight: 500;
+  font-size: 17.025px;
+  line-height: 28px;
+  color: #bcbcbc;
+}
+
+.swiper-cover {
+  position: relative;
+  overflow: hidden;
+  width: 225px;
+  height: 225px;
+}
+
+.swiper-cover__img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 225px;
+  height: 225px;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
